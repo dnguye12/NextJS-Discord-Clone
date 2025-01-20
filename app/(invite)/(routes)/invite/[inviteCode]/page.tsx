@@ -4,13 +4,13 @@ import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 interface InviteCodePageProps {
-    params: {inviteCode: string;}
+    params: { inviteCode: string; }
 }
 
 const InviteCodePage = async ({ params }: InviteCodePageProps) => {
     const profile = await currentProfile()
     const { redirectToSignIn } = await auth()
-    const {inviteCode} = await params
+    const { inviteCode } = await params
 
     if (!profile) {
         return redirectToSignIn()
@@ -31,7 +31,7 @@ const InviteCodePage = async ({ params }: InviteCodePageProps) => {
         }
     })
 
-    if(existingServer) {
+    if (existingServer) {
         return redirect(`/servers/${existingServer.id}`)
     }
 
@@ -50,7 +50,7 @@ const InviteCodePage = async ({ params }: InviteCodePageProps) => {
         }
     })
 
-    if(server) {
+    if (server) {
         return redirect(`/servers/${server.id}`)
     }
 
