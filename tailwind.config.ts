@@ -57,9 +57,6 @@ export default withUt({
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-			fontFamily: {
-				open_sans: ["var(--font-open_sans)", "sans-serif"],
-			},
 		}
 	},
 	// eslint-disable-next-line @typescript-eslint/no-require-imports

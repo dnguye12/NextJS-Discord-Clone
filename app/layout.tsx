@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { open_sans } from "@/lib/fonts";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ModalProvider } from "@/components/providers/modal-provider";
@@ -23,7 +22,7 @@ export default function RootLayout({
     >
       <html lang="en" suppressHydrationWarning>
         <body
-          className={`bg-white dark:bg-[#313338] antialiased ${open_sans.variable} font-sans`}
+          className={`bg-white dark:bg-[#313338] antialiased`}
         >
           <ThemeProvider
             attribute={"class"}
