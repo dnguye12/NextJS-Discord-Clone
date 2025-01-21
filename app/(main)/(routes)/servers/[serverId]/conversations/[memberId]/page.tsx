@@ -9,13 +9,13 @@ import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 interface MemberIdPageProps {
-    params: {
+    params: Promise<{
         memberId: string;
         serverId: string;
-    },
-    searchParams: {
+    }>,
+    searchParams: Promise<{
         video?: boolean
-    }
+    }>
 }
 
 const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {

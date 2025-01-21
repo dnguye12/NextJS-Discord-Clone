@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 
 interface ServerIdLayoutProps {
     children: React.ReactNode;
-    params: { serverId: string }
+    params: Promise<{ serverId: string }>
 }
 
 const ServerIdLayout = async ({ children, params }: ServerIdLayoutProps) => {

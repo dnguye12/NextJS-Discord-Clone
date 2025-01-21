@@ -4,7 +4,7 @@ import { NextResponse } from "next/server"
 
 export async function PATCH(
     req: Request,
-    { params }: { params: { serverId: string } }
+    { params }: { params: Promise<{ serverId: string }> }
 ) {
     try {
         const profile = await currentProfile()
@@ -35,7 +35,7 @@ export async function PATCH(
 
 export async function DELETE(
     req: Request,
-    { params }: { params: { serverId: string } }
+    { params }: { params: Promise<{ serverId: string }> }
 ) {
     try {
         const profile = await currentProfile()
